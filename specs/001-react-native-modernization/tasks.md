@@ -11,12 +11,12 @@
 
 **Purpose**: Initialize React Native workspace and Android integration scaffolding.
 
-- [ ] T001 Create React Native workspace manifest in rn-frontend/package.json
-- [ ] T002 Configure TypeScript/Babel/Metro baseline in rn-frontend/tsconfig.json, rn-frontend/babel.config.js, rn-frontend/metro.config.js
-- [ ] T003 [P] Create React Native app entry points in rn-frontend/index.js and rn-frontend/src/app/App.tsx
-- [ ] T004 [P] Create Android host project scaffolding for RN in rn-frontend/android/settings.gradle and rn-frontend/android/app/build.gradle
-- [ ] T005 [P] Create initial source tree placeholders in rn-frontend/src/app/.gitkeep, rn-frontend/src/features/.gitkeep, rn-frontend/src/components/.gitkeep
-- [ ] T006 Add workspace scripts for Android build and run in rn-frontend/package.json
+- [X] T001 Create React Native workspace manifest in rn-frontend/package.json
+- [X] T002 Configure TypeScript/Babel/Metro baseline in rn-frontend/tsconfig.json, rn-frontend/babel.config.js, rn-frontend/metro.config.js
+- [X] T003 [P] Create React Native app entry points in rn-frontend/index.js and rn-frontend/src/app/App.tsx
+- [X] T004 [P] Create Android host project scaffolding for RN in rn-frontend/android/settings.gradle and rn-frontend/android/app/build.gradle
+- [X] T005 [P] Create initial source tree placeholders in rn-frontend/src/app/.gitkeep, rn-frontend/src/features/.gitkeep, rn-frontend/src/components/.gitkeep
+- [X] T006 Add workspace scripts for Android build and run in rn-frontend/package.json
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
@@ -24,15 +24,15 @@
 
 **CRITICAL**: No user-story tasks should start before this phase is complete.
 
-- [ ] T007 Define shared domain and bridge types in rn-frontend/src/types/domain.ts
-- [ ] T008 [P] Implement JS-native bridge facade for connection/diagnostics APIs in rn-frontend/src/services/nativeBridge.ts
-- [ ] T009 [P] Implement shared app state containers for session and diagnostics status in rn-frontend/src/state/sessionStore.ts and rn-frontend/src/state/diagnosticsStore.ts
-- [ ] T010 Implement navigation container and root navigator shell in rn-frontend/src/app/navigation/RootNavigator.tsx
-- [ ] T011 [P] Implement global error and feedback presentation layer in rn-frontend/src/components/feedback/ErrorBanner.tsx and rn-frontend/src/components/feedback/ActionToast.tsx
-- [ ] T012 [P] Implement structured telemetry event and metric adapters in rn-frontend/src/telemetry/events.ts and rn-frontend/src/telemetry/metrics.ts
-- [ ] T013 Implement localization bootstrap and fallback resolution in rn-frontend/src/i18n/index.ts
-- [ ] T014 Wire app providers (navigation, state, i18n, telemetry) in rn-frontend/src/app/AppProviders.tsx
-- [ ] T015 Create bridge contract mapping documentation for implementation traceability in rn-frontend/src/services/README.bridge-contract.md
+- [X] T007 Define shared domain and bridge types in rn-frontend/src/types/domain.ts
+- [X] T008 [P] Implement JS-native bridge facade for connection/diagnostics APIs in rn-frontend/src/services/nativeBridge.ts
+- [X] T009 [P] Implement shared app state containers for session and diagnostics status in rn-frontend/src/state/sessionStore.ts and rn-frontend/src/state/diagnosticsStore.ts
+- [X] T010 Implement navigation container and root navigator shell in rn-frontend/src/app/navigation/RootNavigator.tsx
+- [X] T011 [P] Implement global error and feedback presentation layer in rn-frontend/src/components/feedback/ErrorBanner.tsx and rn-frontend/src/components/feedback/ActionToast.tsx
+- [X] T012 [P] Implement structured telemetry event and metric adapters in rn-frontend/src/telemetry/events.ts and rn-frontend/src/telemetry/metrics.ts
+- [X] T013 Implement localization bootstrap and fallback resolution in rn-frontend/src/i18n/index.ts
+- [X] T014 Wire app providers (navigation, state, i18n, telemetry) in rn-frontend/src/app/AppProviders.tsx
+- [X] T015 Create bridge contract mapping documentation for implementation traceability in rn-frontend/src/services/README.bridge-contract.md
 
 **Checkpoint**: Foundation complete; user stories can start.
 
