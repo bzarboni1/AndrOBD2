@@ -28,3 +28,13 @@ This contract defines release gates for one-cutover migration to React Native UI
 - All P1/P2 acceptance scenarios from spec pass on Android release candidates.
 - No unresolved blocker defects in parity-critical journeys.
 - Launch dashboards confirm collection of required metrics in staging and production canary.
+
+## Validation Checklist (T052)
+
+| Gate | Validation Artifact | Status |
+|---|---|---|
+| Core diagnostics parity | rn-frontend/tests/e2e/diagnostics-parity.e2e.ts | Implemented |
+| Measurement parity | rn-frontend/tests/e2e/measurements-parity.e2e.ts | Implemented |
+| Plugin parity | docs/react-native-plugin-parity-matrix.md | Implemented |
+| Localization parity | docs/react-native-localization-coverage.md | Implemented |
+| Observability readiness | rn-frontend/src/telemetry/events.ts + rn-frontend/src/telemetry/metrics.ts | Implemented |

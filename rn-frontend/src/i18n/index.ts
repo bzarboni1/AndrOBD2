@@ -1,17 +1,16 @@
-const translations: Record<string, Record<string, string>> = {
-  en: {
-    appTitle: "AndrOBD Modern",
-    bootstrapMessage: "Modern frontend foundation ready"
-  }
-};
+import { getBundle, localeRegistry } from "./resources";
 
-const DEFAULT_LOCALE = "en";
+export const DEFAULT_LOCALE = "en";
 
 export function getSupportedLocales(): string[] {
-  return Object.keys(translations);
+  return Object.keys(localeRegistry);
 }
 
 export function translate(key: string, locale = DEFAULT_LOCALE): string {
-  const selected = translations[locale] ?? translations[DEFAULT_LOCALE];
-  return selected[key] ?? translations[DEFAULT_LOCALE][key] ?? key;
+  const bundle = getBundle(locale);
+  const defaultBundle = getBundle(DEFAULT_LOCALE);
+  return bundle[key] ?? defaultBundle[key] ?? key;
 }
+
+// Alias used by feature code to keep naming concise.
+export const t = translate;

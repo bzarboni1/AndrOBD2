@@ -42,16 +42,16 @@
 
 **Independent Test**: Launch app, connect to supported adapter/demo source, run vehicle info + freeze frames + test controls + read codes + clear codes with explicit outcome messaging.
 
-- [ ] T016 [P] [US1] Implement home and connection screens in rn-frontend/src/features/connection/screens/HomeScreen.tsx and rn-frontend/src/features/connection/screens/ConnectScreen.tsx
-- [ ] T017 [US1] Implement transport selection and connect/disconnect actions in rn-frontend/src/features/connection/components/TransportSelector.tsx and rn-frontend/src/features/connection/hooks/useConnectionActions.ts
-- [ ] T018 [US1] Implement diagnostics hub navigation route in rn-frontend/src/features/diagnostics/screens/DiagnosticsHomeScreen.tsx
-- [ ] T019 [P] [US1] Implement diagnostic service action hooks (vehicle info/read codes/clear codes) in rn-frontend/src/features/diagnostics/hooks/useDiagnosticActions.ts
-- [ ] T020 [P] [US1] Implement freeze-frame retrieval flow in rn-frontend/src/features/diagnostics/hooks/useFreezeFrameActions.ts and rn-frontend/src/features/diagnostics/components/FreezeFramePanel.tsx
-- [ ] T021 [P] [US1] Implement test-control flow in rn-frontend/src/features/diagnostics/hooks/useTestControlActions.ts and rn-frontend/src/features/diagnostics/components/TestControlPanel.tsx
-- [ ] T022 [US1] Implement fault code list and detail rendering in rn-frontend/src/features/diagnostics/components/FaultCodeList.tsx
-- [ ] T023 [US1] Implement destructive confirmation flow for clear-codes action in rn-frontend/src/features/diagnostics/components/ClearCodesConfirmDialog.tsx
-- [ ] T024 [US1] Implement connected-only eligibility guards and unsupported-service messaging in rn-frontend/src/features/diagnostics/utils/actionEligibility.ts
-- [ ] T025 [US1] Emit connection and diagnostic telemetry events in rn-frontend/src/features/connection/hooks/useConnectionActions.ts and rn-frontend/src/features/diagnostics/hooks/useDiagnosticActions.ts
+- [X] T016 [P] [US1] Implement home and connection screens in rn-frontend/src/features/connection/screens/HomeScreen.tsx and rn-frontend/src/features/connection/screens/ConnectScreen.tsx
+- [X] T017 [US1] Implement transport selection and connect/disconnect actions in rn-frontend/src/features/connection/components/TransportSelector.tsx and rn-frontend/src/features/connection/hooks/useConnectionActions.ts
+- [X] T018 [US1] Implement diagnostics hub navigation route in rn-frontend/src/features/diagnostics/screens/DiagnosticsHomeScreen.tsx
+- [X] T019 [P] [US1] Implement diagnostic service action hooks (vehicle info/read codes/clear codes) in rn-frontend/src/features/diagnostics/hooks/useDiagnosticActions.ts
+- [X] T020 [P] [US1] Implement freeze-frame retrieval flow in rn-frontend/src/features/diagnostics/hooks/useFreezeFrameActions.ts and rn-frontend/src/features/diagnostics/components/FreezeFramePanel.tsx
+- [X] T021 [P] [US1] Implement test-control flow in rn-frontend/src/features/diagnostics/hooks/useTestControlActions.ts and rn-frontend/src/features/diagnostics/components/TestControlPanel.tsx
+- [X] T022 [US1] Implement fault code list and detail rendering in rn-frontend/src/features/diagnostics/components/FaultCodeList.tsx
+- [X] T023 [US1] Implement destructive confirmation flow for clear-codes action in rn-frontend/src/features/diagnostics/components/ClearCodesConfirmDialog.tsx
+- [X] T024 [US1] Implement connected-only eligibility guards and unsupported-service messaging in rn-frontend/src/features/diagnostics/utils/actionEligibility.ts
+- [X] T025 [US1] Emit connection and diagnostic telemetry events in rn-frontend/src/features/connection/hooks/useConnectionActions.ts and rn-frontend/src/features/diagnostics/hooks/useDiagnosticActions.ts
 
 **Checkpoint**: US1 is independently functional and parity-testable.
 
@@ -61,15 +61,15 @@
 
 **Independent Test**: Start live data, switch views (table/chart/dashboard/HUD), record session, save/load recording, export legacy-compatible output.
 
-- [ ] T026 [P] [US2] Implement live-data route and screen shell in rn-frontend/src/features/live-data/screens/LiveDataScreen.tsx
-- [ ] T027 [P] [US2] Implement table and chart presenters in rn-frontend/src/features/live-data/components/LiveDataTable.tsx and rn-frontend/src/features/live-data/components/LiveDataChart.tsx
-- [ ] T028 [P] [US2] Implement dashboard and HUD presenters in rn-frontend/src/features/live-data/components/LiveDataDashboard.tsx and rn-frontend/src/features/live-data/components/LiveDataHud.tsx
-- [ ] T029 [US2] Implement stream subscription and reconnect behavior in rn-frontend/src/features/live-data/hooks/useLiveDataStream.ts
-- [ ] T030 [US2] Implement recording lifecycle actions (start/stop/save) in rn-frontend/src/features/measurements/hooks/useRecordingActions.ts
-- [ ] T031 [US2] Implement recording library load/list flow in rn-frontend/src/features/measurements/screens/RecordingLibraryScreen.tsx
-- [ ] T032 [US2] Implement legacy-compatible export flow in rn-frontend/src/features/measurements/hooks/useRecordingExport.ts
-- [ ] T033 [US2] Handle corrupted/incompatible file load errors in rn-frontend/src/features/measurements/utils/recordingValidation.ts
-- [ ] T034 [US2] Emit measurement and export telemetry metrics in rn-frontend/src/features/measurements/hooks/useRecordingActions.ts and rn-frontend/src/features/measurements/hooks/useRecordingExport.ts
+- [X] T026 [P] [US2] Implement live-data route and screen shell in rn-frontend/src/features/live-data/screens/LiveDataScreen.tsx
+- [X] T027 [P] [US2] Implement table and chart presenters in rn-frontend/src/features/live-data/components/LiveDataTable.tsx and rn-frontend/src/features/live-data/components/LiveDataChart.tsx
+- [X] T028 [P] [US2] Implement dashboard and HUD presenters in rn-frontend/src/features/live-data/components/LiveDataDashboard.tsx and rn-frontend/src/features/live-data/components/LiveDataHud.tsx
+- [X] T029 [US2] Implement stream subscription and reconnect behavior in rn-frontend/src/features/live-data/hooks/useLiveDataStream.ts
+- [X] T030 [US2] Implement recording lifecycle actions (start/stop/save) in rn-frontend/src/features/measurements/hooks/useRecordingActions.ts
+- [X] T031 [US2] Implement recording library load/list flow in rn-frontend/src/features/measurements/screens/RecordingLibraryScreen.tsx
+- [X] T032 [US2] Implement legacy-compatible export flow in rn-frontend/src/features/measurements/hooks/useRecordingExport.ts
+- [X] T033 [US2] Handle corrupted/incompatible file load errors in rn-frontend/src/features/measurements/utils/recordingValidation.ts
+- [X] T034 [US2] Emit measurement and export telemetry metrics in rn-frontend/src/features/measurements/hooks/useRecordingActions.ts and rn-frontend/src/features/measurements/hooks/useRecordingExport.ts
 
 **Checkpoint**: US2 is independently functional and parity-testable.
 
@@ -79,16 +79,16 @@
 
 **Independent Test**: Update preferences and relaunch, manage plugins, execute plugin actions, reset preselections, verify persisted behavior.
 
-- [ ] T035 [P] [US3] Implement settings route and screen shell in rn-frontend/src/features/settings/screens/SettingsScreen.tsx
-- [ ] T036 [US3] Implement preference load/update persistence hooks for theme, preferred data view, default home behavior, and locale in rn-frontend/src/features/settings/hooks/usePreferences.ts
-- [ ] T037 [US3] Implement day/night/system theme controls in rn-frontend/src/features/settings/components/ThemeModeSelector.tsx
-- [ ] T038 [P] [US3] Implement plugin manager list and status UI in rn-frontend/src/features/plugins/screens/PluginManagerScreen.tsx
-- [ ] T039 [US3] Implement plugin action invocation and failure feedback in rn-frontend/src/features/plugins/hooks/usePluginActions.ts
-- [ ] T040 [US3] Implement reset-preselections flow with confirmation in rn-frontend/src/features/settings/components/ResetPreselectionsAction.tsx
-- [ ] T041 [US3] Implement localization fallback handling for missing keys in rn-frontend/src/i18n/fallbackResolver.ts
-- [ ] T042 [US3] Emit plugin initialization/action telemetry in rn-frontend/src/features/plugins/hooks/usePluginActions.ts
-- [ ] T056 [US3] Implement migration mapping from existing Android translation resources to RN locale bundles in rn-frontend/src/i18n/resources/index.ts
-- [ ] T060 [P] [US2] Create legacy recording read compatibility validation corpus and pass criteria in rn-frontend/tests/integration/legacy-recording-read-compatibility.test.ts and docs/react-native-legacy-read-compatibility-matrix.md
+- [X] T035 [P] [US3] Implement settings route and screen shell in rn-frontend/src/features/settings/screens/SettingsScreen.tsx
+- [X] T036 [US3] Implement preference load/update persistence hooks for theme, preferred data view, default home behavior, and locale in rn-frontend/src/features/settings/hooks/usePreferences.ts
+- [X] T037 [US3] Implement day/night/system theme controls in rn-frontend/src/features/settings/components/ThemeModeSelector.tsx
+- [X] T038 [P] [US3] Implement plugin manager list and status UI in rn-frontend/src/features/plugins/screens/PluginManagerScreen.tsx
+- [X] T039 [US3] Implement plugin action invocation and failure feedback in rn-frontend/src/features/plugins/hooks/usePluginActions.ts
+- [X] T040 [US3] Implement reset-preselections flow with confirmation in rn-frontend/src/features/settings/components/ResetPreselectionsAction.tsx
+- [X] T041 [US3] Implement localization fallback handling for missing keys in rn-frontend/src/i18n/fallbackResolver.ts
+- [X] T042 [US3] Emit plugin initialization/action telemetry in rn-frontend/src/features/plugins/hooks/usePluginActions.ts
+- [X] T056 [US3] Implement migration mapping from existing Android translation resources to RN locale bundles in rn-frontend/src/i18n/resources/index.ts
+- [X] T060 [P] [US2] Create legacy recording read compatibility validation corpus and pass criteria in rn-frontend/tests/integration/legacy-recording-read-compatibility.test.ts and docs/react-native-legacy-read-compatibility-matrix.md
 
 **Checkpoint**: US3 is independently functional and parity-testable.
 
@@ -96,22 +96,22 @@
 
 **Purpose**: Complete release gates, parity validation, and production cutover readiness.
 
-- [ ] T043 [P] Create automated parity E2E suite for P1 flows in rn-frontend/tests/e2e/diagnostics-parity.e2e.ts
-- [ ] T044 [P] Create automated parity E2E suite for P2 flows in rn-frontend/tests/e2e/measurements-parity.e2e.ts
-- [ ] T045 [P] Create plugin parity matrix verification checklist in docs/react-native-plugin-parity-matrix.md
-- [ ] T046 [P] Create localization migration and coverage verification checklist in docs/react-native-localization-coverage.md
-- [ ] T047 Define usability measurement protocol for SC-002 and SC-004 in docs/react-native-usability-protocol.md
-- [ ] T048 Define performance baseline protocol for SC-003 in docs/react-native-performance-protocol.md
-- [ ] T049 Define support-issue taxonomy tracking for SC-005 in docs/react-native-support-metrics-protocol.md
-- [ ] T050 [P] Document final navigation map and screen parity matrix in docs/react-native-navigation-map.md
-- [ ] T051 [P] Profile critical UI flows and record performance notes in docs/react-native-performance-baseline.md
-- [ ] T052 Validate release parity gates from specs/001-react-native-modernization/contracts/release-parity-contract.md in specs/001-react-native-modernization/contracts/release-parity-contract.md
-- [ ] T053 Verify structured logs and launch metrics wiring in rn-frontend/src/telemetry/events.ts and rn-frontend/src/telemetry/metrics.ts
-- [ ] T054 Execute quickstart validation checklist updates in specs/001-react-native-modernization/quickstart.md
-- [ ] T055 Prepare cutover release checklist with no-legacy-fallback confirmation in docs/react-native-cutover-checklist.md
-- [ ] T057 Execute SC-002 and SC-004 usability protocol and capture results in docs/react-native-usability-results.md
-- [ ] T058 Execute SC-003 diagnostics timing baseline protocol and capture pass/fail evidence in docs/react-native-performance-results.md
-- [ ] T059 Execute SC-005 support-issue taxonomy reporting and capture release-cycle baseline in docs/react-native-support-metrics-report.md
+- [X] T043 [P] Create automated parity E2E suite for P1 flows in rn-frontend/tests/e2e/diagnostics-parity.e2e.ts
+- [X] T044 [P] Create automated parity E2E suite for P2 flows in rn-frontend/tests/e2e/measurements-parity.e2e.ts
+- [X] T045 [P] Create plugin parity matrix verification checklist in docs/react-native-plugin-parity-matrix.md
+- [X] T046 [P] Create localization migration and coverage verification checklist in docs/react-native-localization-coverage.md
+- [X] T047 Define usability measurement protocol for SC-002 and SC-004 in docs/react-native-usability-protocol.md
+- [X] T048 Define performance baseline protocol for SC-003 in docs/react-native-performance-protocol.md
+- [X] T049 Define support-issue taxonomy tracking for SC-005 in docs/react-native-support-metrics-protocol.md
+- [X] T050 [P] Document final navigation map and screen parity matrix in docs/react-native-navigation-map.md
+- [X] T051 [P] Profile critical UI flows and record performance notes in docs/react-native-performance-baseline.md
+- [X] T052 Validate release parity gates from specs/001-react-native-modernization/contracts/release-parity-contract.md in specs/001-react-native-modernization/contracts/release-parity-contract.md
+- [X] T053 Verify structured logs and launch metrics wiring in rn-frontend/src/telemetry/events.ts and rn-frontend/src/telemetry/metrics.ts
+- [X] T054 Execute quickstart validation checklist updates in specs/001-react-native-modernization/quickstart.md
+- [X] T055 Prepare cutover release checklist with no-legacy-fallback confirmation in docs/react-native-cutover-checklist.md
+- [X] T057 Execute SC-002 and SC-004 usability protocol and capture results in docs/react-native-usability-results.md
+- [X] T058 Execute SC-003 diagnostics timing baseline protocol and capture pass/fail evidence in docs/react-native-performance-results.md
+- [X] T059 Execute SC-005 support-issue taxonomy reporting and capture release-cycle baseline in docs/react-native-support-metrics-report.md
 
 ## Dependencies & Execution Order
 

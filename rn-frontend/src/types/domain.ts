@@ -30,6 +30,14 @@ export interface DiagnosticServiceAction {
   errorMessage?: string;
 }
 
+export interface LiveDataSample {
+  pid: string;
+  label: string;
+  value: number;
+  unit: string;
+  timestamp: string;
+}
+
 export interface MeasurementRecording {
   recordingId: string;
   createdAt: string;
