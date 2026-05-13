@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { nativeBridge } from "../../../services/nativeBridge";
+import { buildDemoSamples, nativeBridge } from "../../../services/nativeBridge";
 import { useSessionStore } from "../../../state/sessionStore";
 import { emitStructuredLog } from "../../../telemetry/events";
 
@@ -22,10 +22,15 @@ export function useLiveDataStream(): LiveDataStreamResult {
   const [isStreaming, setIsStreaming] = useState(false);
   const [lastError, setLastError] = useState<string | null>(null);
   const streamIdRef = useRef<string | null>(null);
+  const sampleIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
+      if (sampleIntervalRef.current) {
+        clearInterval(sampleIntervalRef.current);
+        sampleIntervalRef.current = null;
+      }
       if (streamIdRef.current) {
         nativeBridge.stopLiveData(streamIdRef.current).catch(() => undefined);
       }
@@ -54,6 +59,13 @@ export function useLiveDataStream(): LiveDataStreamResult {
         streamIdRef.current = id;
         setStreamId(id);
         setIsStreaming(true);
+        setSamples(buildDemoSamples());
+        if (sampleIntervalRef.current) {
+          clearInterval(sampleIntervalRef.current);
+        }
+        sampleIntervalRef.current = setInterval(() => {
+          setSamples(buildDemoSamples());
+        }, 1000);
         emitStructuredLog({
           event: "liveData.stream.started",
           level: "info",
@@ -84,6 +96,10 @@ export function useLiveDataStream(): LiveDataStreamResult {
     try {
       await nativeBridge.stopLiveData(streamIdRef.current);
     } finally {
+      if (sampleIntervalRef.current) {
+        clearInterval(sampleIntervalRef.current);
+        sampleIntervalRef.current = null;
+      }
       streamIdRef.current = null;
       setStreamId(null);
       setIsStreaming(false);
