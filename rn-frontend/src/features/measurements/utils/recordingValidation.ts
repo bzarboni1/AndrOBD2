@@ -46,8 +46,29 @@ export function validateRecording(candidate: unknown): ValidationResult {
 }
 
 function isVersionCompatible(version: string, minimum: string): boolean {
-  const [maj, min] = version.split(".").map(Number);
-  const [minMaj, minMin] = minimum.split(".").map(Number);
-  if (maj !== minMaj) return maj > minMaj;
-  return min >= minMin;
+  const parsedVersion = parseVersion(version);
+  const parsedMinimum = parseVersion(minimum);
+
+  if (!parsedVersion || !parsedMinimum) {
+    return false;
+  }
+
+  if (parsedVersion.major !== parsedMinimum.major) {
+    return parsedVersion.major > parsedMinimum.major;
+  }
+
+  return parsedVersion.minor >= parsedMinimum.minor;
+}
+
+function parseVersion(input: string): { major: number; minor: number } | null {
+  const trimmed = input.trim();
+  if (!/^\d+(?:\.\d+)*$/.test(trimmed)) {
+    return null;
+  }
+
+  const [majorPart, minorPart = "0"] = trimmed.split(".");
+  return {
+    major: Number(majorPart),
+    minor: Number(minorPart)
+  };
 }

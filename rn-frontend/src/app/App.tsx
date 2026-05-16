@@ -9,7 +9,7 @@ export default function App(): React.JSX.Element {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
       <StatusBar barStyle="default" />
       <View style={{ paddingHorizontal: 12, paddingVertical: 8 }}>
-        <Text>{translate("appTitle")}</Text>
+        <Text>{translate("app_name")}</Text>
       </View>
       <AppProviders />
     </SafeAreaView>

@@ -25,3 +25,4 @@ This file tracks implementation mapping between frontend bridge functions and
 - [ ] setPreference
 - [ ] listPlugins
 - [ ] invokePluginAction
+- [ ] buildDemoSamples (frontend demo/live-data helper)

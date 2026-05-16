@@ -1,25 +1,13 @@
 describe("Measurements parity (P2)", () => {
   beforeAll(async () => {
-    // Placeholder bootstrap for Detox runtime.
+    // Scaffold-only bootstrap placeholder for Detox runtime.
   });
 
-  it("starts and stops live data stream", async () => {
-    // TODO(detox): navigate to Live Data, start stream, validate status, stop stream.
-    expect(true).toBe(true);
-  });
+  it.todo("starts and stops live data stream");
 
-  it("switches live data presentation modes", async () => {
-    // TODO(detox): toggle table/chart/dashboard/HUD and verify presenter switches.
-    expect(true).toBe(true);
-  });
+  it.todo("switches live data presentation modes");
 
-  it("loads recording library and handles empty state", async () => {
-    // TODO(detox): open Measurements and verify empty-state and load action availability.
-    expect(true).toBe(true);
-  });
+  it.todo("loads recording library and handles empty state");
 
-  it("exports a loaded recording in legacy format", async () => {
-    // TODO(detox): load fixture recording, export, assert success banner and file URI presence.
-    expect(true).toBe(true);
-  });
+  it.todo("exports a loaded recording in legacy format");
 });

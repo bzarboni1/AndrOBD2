@@ -4,22 +4,22 @@ import { nativeBridge } from "../../../services/nativeBridge";
 import { emitStructuredLog } from "../../../telemetry/events";
 import { incrementMetric } from "../../../telemetry/metrics";
 
-import type { ExtensionModuleState } from "../../../types/domain";
+import type { ExtensionModuleState, PluginActionResult } from "../../../types/domain";
 
 interface PluginActionsResult {
   plugins: ExtensionModuleState[];
   isLoading: boolean;
   lastError: string | null;
   loadPlugins: () => Promise<void>;
-  invokeAction: (moduleId: string, action: string, payload?: unknown) => Promise<unknown>;
-  lastActionResult: unknown;
+  invokeAction: (moduleId: string, action: string, payload?: unknown) => Promise<PluginActionResult | null>;
+  lastActionResult: PluginActionResult | null;
 }
 
 export function usePluginActions(): PluginActionsResult {
   const [plugins, setPlugins] = useState<ExtensionModuleState[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [lastError, setLastError] = useState<string | null>(null);
-  const [lastActionResult, setLastActionResult] = useState<unknown>(null);
+  const [lastActionResult, setLastActionResult] = useState<PluginActionResult | null>(null);
 
   const loadPlugins = useCallback(async (): Promise<void> => {
     setIsLoading(true);
@@ -48,7 +48,7 @@ export function usePluginActions(): PluginActionsResult {
   }, []);
 
   const invokeAction = useCallback(
-    async (moduleId: string, action: string, payload?: unknown): Promise<unknown> => {
+    async (moduleId: string, action: string, payload?: unknown): Promise<PluginActionResult | null> => {
       setLastError(null);
       emitStructuredLog({
         event: "plugins.action.start",

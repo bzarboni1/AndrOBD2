@@ -49,6 +49,18 @@ const INCOMPATIBLE_VERSION: unknown = {
   formatVersion: "0.9"
 };
 
+const MAJOR_ONLY_VERSION: unknown = {
+  recordingId: "major-only-001",
+  fileUri: "file:///sdcard/androbd/recordings/major-only.obd",
+  formatVersion: "1"
+};
+
+const PATCH_VERSION: unknown = {
+  recordingId: "patch-001",
+  fileUri: "file:///sdcard/androbd/recordings/patch.obd",
+  formatVersion: "1.0.1"
+};
+
 const NULL_INPUT: unknown = null;
 const PRIMITIVE_INPUT: unknown = "not-an-object";
 const EMPTY_OBJECT: unknown = {};
@@ -126,6 +138,24 @@ describe("Legacy Recording Read Compatibility", () => {
       if (!result.valid) {
         expect(result.reason).toContain("0.9");
         expect(result.reason).toContain("1.0");
+      }
+    });
+  });
+
+  describe("Version normalization", () => {
+    it("accepts major-only version by treating missing minor as 0", () => {
+      const result = validateRecording(MAJOR_ONLY_VERSION);
+      expect(result.valid).toBe(true);
+      if (result.valid) {
+        expect(result.recording.formatVersion).toBe("1");
+      }
+    });
+
+    it("accepts patch versions when major/minor are compatible", () => {
+      const result = validateRecording(PATCH_VERSION);
+      expect(result.valid).toBe(true);
+      if (result.valid) {
+        expect(result.recording.formatVersion).toBe("1.0.1");
       }
     });
   });

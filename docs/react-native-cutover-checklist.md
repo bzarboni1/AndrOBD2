@@ -3,7 +3,7 @@
 ## Pre-Release Gates
 
 - [x] P1 diagnostics parity scenarios implemented.
-- [x] P2 measurement flows implemented.
+- [ ] P2 measurement flows implemented (Detox parity test is scaffold-only).
 - [x] P3 settings/plugins/personalization flows implemented.
 - [x] Localization fallback behavior implemented.
 - [x] Structured logs and core metrics emitted by connection/diagnostics/plugin flows.

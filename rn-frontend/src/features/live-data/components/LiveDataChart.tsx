@@ -40,7 +40,7 @@ export function LiveDataChart({ samples }: LiveDataChartProps): React.JSX.Elemen
               </Text>
             </View>
             <View style={styles.barTrack}>
-              <View style={[styles.bar, { width: `${barPct * 100}%` as unknown as number }]} />
+              <View style={[styles.bar, { width: `${barPct * 100}%` }]} />
             </View>
           </View>
         );

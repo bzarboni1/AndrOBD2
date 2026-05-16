@@ -5,6 +5,7 @@ import type {
   ExtensionModuleState,
   MeasurementRecording,
   LiveDataSample,
+  PluginActionResult,
   TransportType,
   UserPreferenceProfile
 } from "../types/domain";
@@ -291,7 +292,7 @@ export const nativeBridge = {
     moduleId: string,
     action: string,
     payload?: unknown
-  ): Promise<{ status: string; data?: unknown }> {
+  ): Promise<PluginActionResult> {
     return {
       status: "ok",
       data: {

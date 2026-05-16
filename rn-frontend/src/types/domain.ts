@@ -16,7 +16,7 @@ export interface ConnectionSession {
   status: ConnectionStatus;
   connectedAt?: string;
   lastError?: string;
-  vehicleCapabilities?: string[];
+  vehicleCapabilities?: DiagnosticServiceType[];
 }
 
 export interface DiagnosticServiceAction {
@@ -66,4 +66,9 @@ export interface ExtensionModuleState {
   compatibilityStatus: "compatible" | "degraded" | "incompatible";
   lastInitializationResult: "ok" | "failed" | "notRun";
   lastError?: string;
+}
+
+export interface PluginActionResult {
+  status: string;
+  data?: unknown;
 }
