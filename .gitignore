@@ -9,3 +9,10 @@
 **/*.iml
 *~
 local.properties
+node_modules/
+rn-frontend/android/app/**
+rn-frontend/node_modules/
+rn-frontend/dist/
+rn-frontend/build/
+*.log
+.env*
